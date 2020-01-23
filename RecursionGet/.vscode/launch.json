@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Codechef<RecursionGet_55f6ff8c>",
+            "request": "launch",
+            "mainClass": "Codechef",
+            "projectName": "RecursionGet_55f6ff8c"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-mazepath<RecursionGet_55f6ff8c>",
+            "request": "launch",
+            "mainClass": "mazepath",
+            "projectName": "RecursionGet_55f6ff8c"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-run<RecursionGet_55f6ff8c>",
+            "request": "launch",
+            "mainClass": "run",
+            "projectName": "RecursionGet_55f6ff8c"
+        }
+    ]
+}
