@@ -45,6 +45,10 @@ class queueUsingArrays {
         return temp;
     }
 
+    public int peek() {
+        return this.front;
+    }
+
     public void display() {
         for (int i = 0; i < this.size; i++) {
             int ai = (this.front + i) % this.data.length;
