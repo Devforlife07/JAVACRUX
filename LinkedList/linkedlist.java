@@ -104,4 +104,77 @@ class linkedlist {
         }
 
     }
+
+    public void addat(int item, int index) throws Exception {
+        if (index < 0 || index > size)
+            throw new Exception("Invalid Index");
+        if (index == 0)
+            addAtFirst(item);
+        else if (index == size)
+            addAtLast(item);
+        else {
+            node nn = new node();
+            nn.data = item;
+            nn.next = null;
+            node nm1 = getnodeat(index - 1);
+            nn.next = nm1.next;
+            nm1.next = nn;
+            this.size++;
+        }
+
+    }
+
+    // O(1)
+    public int removefirst() throws Exception {
+        if (this.size == 0)
+            throw new Exception("Linked List Is Empty");
+        if (this.size == 1) {
+            int item = head.data;
+            head = null;
+            tail = null;
+            this.size = 0;
+            return item;
+
+        } else {
+            int item = head.data;
+            head = head.next;
+            this.size--;
+            return item;
+        }
+    }
+
+    // O(1)
+    public int removelast() throws Exception {
+        if (this.size == 0)
+            throw new Exception("Linked List Is Empty");
+        else if (this.size == 1) {
+            int item = head.data;
+            this.head = null;
+            this.tail = null;
+            this.size = 0;
+            return item;
+        } else {
+            int item = this.tail.data;
+            node nm2 = getnodeat(size - 2);
+            this.tail = nm2;
+            this.tail.next = null;
+            this.size--;
+            return item;
+        }
+    }
+
+    public void reverseData() throws Exception {
+        int left = 0;
+        int right = this.size - 1;
+        while (left < right) {
+            node l = getnodeat(left);
+            node r = getnodeat(right);
+            int temp = l.data;
+            l.data = r.data;
+            r.data = temp;
+            left++;
+            right--;
+        }
+    }
+
 }

@@ -6,8 +6,11 @@ class llclient {
         for (int i = 1; i <= 10; i++)
             ll.addAtFirst(i);
         ll.display();
-        System.out.println(ll.getLast());
-        int item = ll.getat(3);
-        System.out.println(item);
+        ll.removelast();
+        System.out.println(ll.getat(2));
+        ll.removefirst();
+        ll.display();
+        ll.reverseData();
+        ll.display();
     }
 }
