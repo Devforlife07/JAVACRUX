@@ -20,7 +20,7 @@ class generictree {
     }
 
     private node takeInput(Scanner s, node parent, int ithchild) {
-        if (this.root == null) {
+        if (parent == null) {
             System.out.println("Enter The Data For The Root Node");
         } else {
             System.out.println("Enter The Data For The " + ithchild + " Child");
@@ -38,8 +38,28 @@ class generictree {
         return n;
     }
 
+    public void display() {
+        this.display(this.root);
+    }
+
+    private void display(node root) {
+        String str = root.data + "=>";
+
+        for (int i = 0; i < root.children.size(); i++) {
+            str += root.children.get(i).data + ", ";
+
+        }
+        str += " End";
+        System.out.println(str);
+        for (int i = 0; i < root.children.size(); i++) {
+
+            display(root.children.get(i));
+        }
+    }
+
     public static void main(String[] args) {
         generictree obj = new generictree();
+        obj.display();
 
     }
 }

@@ -12,5 +12,6 @@ class llclient {
         ll.display();
         ll.reverseData();
         ll.display();
+        System.out.println("Mid=" + ll.mid());
     }
 }
