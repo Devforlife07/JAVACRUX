@@ -106,7 +106,7 @@ public class bst {
                 if (isleft)
                     parent.left = root.right;
                 else
-                    parent.right = root.right;
+                    parent.right = root.right; 
             } else if (root.left != null && root.right == null) {
                 if (isleft)
                     parent.left = root.left;

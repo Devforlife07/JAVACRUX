@@ -18,6 +18,6 @@ public class sumoftwoarrays {
             b[i] = sc.nextInt();
         String str1 = Arrays.toString(a);
         String str2 = Arrays.toString(b);
-        System.out.println(Integer.parseInt(str1));
+        // System.out.println(Integer.parseInt(str1));
     }
 }

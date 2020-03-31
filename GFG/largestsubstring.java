@@ -20,5 +20,5 @@ class random {
 
     char cc = str.charAt(index);
     System.out.println(cc);
-
+    getans(str)
 }
