@@ -11,6 +11,9 @@ public class gogoagone {
         int i = 0;
         while (i < 8) {
             a[i] = sc.nextInt();
+            i++;
         }
+        int k = sc.nextInt();
+        int 
     }
 }

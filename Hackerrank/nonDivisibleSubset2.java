@@ -18,19 +18,16 @@ public class nonDivisibleSubset2 {
             System.out.println(1);
             return;
         }
-        if (k == 2) {
-            System.out.println(2);
-            return;
-        }
+        
         long sum = 0;
         sum += Math.min(1, ans[0]);
         int j = 1;
         int last = ans.length - 1;
         while (j < last) {
             if (ans[j] > ans[last]) {
-                sum -= ans[last];
+                sum += ans[j];
             } else {
-                sum -= ans[j];
+                sum += ans[last];
             }
             j++;
             last--;
